@@ -9,7 +9,16 @@ body {
   color: #f9f6f6 !important;
   overflow: hidden;
 }
-
+.loading-screen {
+  z-index: 999;
+  display: flex;
+}
+.inner-loading-screen {
+  position: absolute;
+  z-index: 9;
+  background-color: #0d0d0d;
+  display: flex;
+}
 .meal:hover .meal-layer {
   top: 0;
 }
@@ -35,4 +44,10 @@ img {
   display: flex;
   background-color: black;
   z-index: 333;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.alert {
+  width: fit-content;
 }

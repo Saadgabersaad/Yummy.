@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Yummy</title>
+    <link rel="shortcut icon" href="css/logoo.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -11,7 +12,14 @@
 
   <body>
     <section id="main">
+      <div
+        class="inner-loading-screen top-0 start-0 end-0 bottom-0 justify-content-center align-items-center"
+        style="display: none"
+      >
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+      </div>
       <!-- !!!!!!!!!!!!!!!!!!!!!!! -->
+      <!--? Side Nav ? -->
       <!-- !!!!!!!!!!!!!!!!!!!!!!! -->
       <div
         class="side-nav-menu min-vh-100 position-fixed d-flex top-0"
@@ -23,36 +31,31 @@
           <div class="links">
             <ul class="list-unstyled overflow-hidden">
               <li
-                onclick="showSearchInputs(); closeSideNav()"
-                class="py-2 position-relative cursor-pointer"
+                class="py-2 SearchInputs position-relative cursor-pointer"
                 style="top: 0px"
               >
                 Search
               </li>
               <li
-                onclick="getCategories(); closeSideNav()"
-                class="py-2 position-relative cursor-pointer"
+                class="py-2 Categories position-relative cursor-pointer"
                 style="top: 0px"
               >
                 Categories
               </li>
               <li
-                onclick="getArea(); closeSideNav()"
-                class="py-2 position-relative cursor-pointer"
+                class="py-2 area position-relative cursor-pointer"
                 style="top: 0px"
               >
                 Area
               </li>
               <li
-                onclick="getIngredients(); closeSideNav()"
-                class="py-2 position-relative cursor-pointer"
+                class="py-2 Ingredients position-relative cursor-pointer"
                 style="top: 0px"
               >
                 Ingredients
               </li>
               <li
-                onclick="showContacts(); closeSideNav()"
-                class="py-2 position-relative cursor-pointer"
+                class="py-2 Contacts position-relative cursor-pointer"
                 style="top: 0px"
               >
                 Contact Us
@@ -73,7 +76,7 @@
         <div
           class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black"
         >
-          <img class="logo" src="imgs/logo.png" alt="" srcset="" />
+          <img class="logo" src="css/logoo.png" alt="" srcset="" />
           <i class="fa-solid open-close-icon fa-2x fa-x"></i>
           <div>
             <i class="fa-solid fa-globe d-block"></i>
@@ -82,7 +85,16 @@
         </div>
       </div>
       <!-- !!!!!!!!!!!!!!!!!!!!!!! -->
+      <!-- Search inputs -->
+      <!-- !!!!!!!!!!!!!!!!!!!!!!! -->
+
       <div class="container">
+        <div
+          class="inner-loading-screen top-0 start-0 end-0 bottom-0 justify-content-center align-items-center"
+          style="display: none"
+        >
+          <i class="fa fa-spinner fa-spin fa-5x"></i>
+        </div>
         <div id="rowData" class="row py-5 g-4">
           <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
           <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
@@ -91,6 +103,14 @@
       <!-- !!!!!!!!!!!!!!!!!!!!!!! -->
     </section>
 
+    <div class="container w-75" id="searchContainer">
+      <div
+        class="inner-loading-screen top-0 start-0 end-0 bottom-0 justify-content-center align-items-center"
+        style="display: none"
+      ></div>
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
   </body>
